@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-11-12 12:05:27'
+  postUpdate: '2021-11-12 13:52:16'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -150,24 +150,30 @@ touch test
 touch test.conf
 
 # cp 复制
-必须的目标文件名
+1. 必须的目标文件名
 
 cp test1.conf  test2.conf
 
-递归复制，包含子目录时用，不加 -r 的话，目录包含子目录文件的话，就会报错
+2. 递归复制
+包含子目录时用，不加 -r 的话，目录包含子目录文件的话，就会报错
 
 cp -r origin dest
 
+3. 复制目录内文件
+复制目录内的文件到别一个目录内，但不包括 test 目录内的隐藏文件，子目录内的隐藏文件会被复制
+
+cp -r  /root/test/*    /usr/test
+
 # mv 移动、重名命、备份
-移动文件到 /tmp
+1. 移动文件到 /tmp
 
 mv test.conf  /tmp
 
-备份文件
+2. 备份文件
 
 mv test test.backup
 
-排除指定目录
+3. 排除指定目录
 
 mv !(child1|child2) child1
 
@@ -178,23 +184,13 @@ mv !(child1|child2) child1
  shopt -s extglob
 
 # rm 删除文件
-有提示删除
+1. 有提示删除
 
 rm  test1.conf
 
-不提示，直接删
+2. 不提示，直接删
 
-rm -f test.conf
-
-删文件夹时加 - r, 不要提示则 -rf
-
-rm -r dir
-
-删除目录不提示 -f 不提示
-
-rm -rf test/
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/11/09/linux-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="linux 进程管理">     <img class="post_bg" src="/img/top_img/default_top_img.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux 进程管理"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/11/09/linux-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="linux 进程管理">linux 进程管理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-09T09:09:43.000Z" title="发表于 2021-11-09 17:09:43">2021-11-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span></div><div class="content"># ps 进程查看
+rm -f test.c ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/11/09/linux-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="linux 进程管理">     <img class="post_bg" src="/img/top_img/default_top_img.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux 进程管理"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/11/09/linux-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="linux 进程管理">linux 进程管理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-09T09:09:43.000Z" title="发表于 2021-11-09 17:09:43">2021-11-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span></div><div class="content"># ps 进程查看
 # 查看所有进程
 显示所有状态
 
@@ -243,4 +239,4 @@ C CPU 使用的资源百分比
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">2</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.5em; color: #99a9bf">linux</a> <a href="/tags/%E6%96%87%E4%BB%B6/" style="font-size: 1.1em; color: #999">文件</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-11-12T04:05:27.017Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 羽落</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.5em; color: #99a9bf">linux</a> <a href="/tags/%E6%96%87%E4%BB%B6/" style="font-size: 1.1em; color: #999">文件</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-11-12T05:52:16.682Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 羽落</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
